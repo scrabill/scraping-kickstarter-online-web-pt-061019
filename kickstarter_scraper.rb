@@ -20,17 +20,8 @@ def create_project_hash
       :percent_funded => kickstarter.css("li.project.grid_4 li.first strong").text.gsub("&","").to_i
 
     }
-
-  projects << project
-
-    projects
-
-    # binding.pry
   end
-
   projects
-
-
 end
 
 # kickstarter.css("li.project.grid_4").first
