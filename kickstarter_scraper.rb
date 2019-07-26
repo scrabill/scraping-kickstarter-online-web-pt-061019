@@ -14,7 +14,7 @@ def create_project_hash
   kickstarter.css.each do |project|
     projects[project] = {}
   end
-  
+
   # kickstarter.css("li.project.grid_4").first
   # kickstarter.css("li.project.grid_4 h2.bbcard_name")
   # kickstarter.css("li.project.grid_4 h2.bbcard_name").first.text.strip
