@@ -14,10 +14,10 @@ def create_project_hash
   kickstarter.css("li.project.grid_4").each do |project|
     title = kickstarter.css("li.project.grid_4 h2.bbcard_name").text
     projects[title.to_sym] = {
-      :description = kickstarter.css("li.project.grid_4 p.bbcard_blurb").text.strip,
+      :description => kickstarter.css("li.project.grid_4 p.bbcard_blurb").text.strip,
       :image_link => kickstarter.css("li.project.grid_4 img.projectphoto-little").attribute("src").value,
-      :location = kickstarter.css("li.project.grid_4 span.location-name").text.strip,
-      :percent_funded = kickstarter.css("li.project.grid_4 li.first strong").text.strip
+      :location => kickstarter.css("li.project.grid_4 span.location-name").text.strip,
+      :percent_funded => kickstarter.css("li.project.grid_4 li.first strong").text.strip
     }
   end
 
