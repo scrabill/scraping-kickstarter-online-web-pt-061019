@@ -13,6 +13,6 @@ def create_project_hash
   kickstarter.css("li.project.grid_4 h2.bbcard_name")
   kickstarter.css("li.project.grid_4 h2.bbcard_name").first.text.strip
   kickstarter.css("li.project.grid_4 p.bbcard_blurb").first.text.strip
-  kickstarter.css("li.project.grid_4 img.projectphoto-little").
+  kickstarter.css("li.project.grid_4 img.projectphoto-little").attribute("src").value
   binding.pry
 end
