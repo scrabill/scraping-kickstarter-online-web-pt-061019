@@ -18,7 +18,6 @@ def create_project_hash
       :image_link => kickstarter.css("li.project.grid_4 img.projectphoto-little").attribute("src").value,
       :location => kickstarter.css("li.project.grid_4 span.location-name").text.strip,
       :percent_funded => kickstarter.css("li.project.grid_4 li.first strong").text.gsub("&","").to_i
-
     }
   end
   projects
