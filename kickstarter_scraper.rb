@@ -21,6 +21,8 @@ def create_project_hash
 
     }
 
+  projects << project
+
     projects
 
     # binding.pry
