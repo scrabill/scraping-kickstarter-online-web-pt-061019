@@ -14,9 +14,9 @@ def create_project_hash
   kickstarter.css("li.project.grid_4").each do |project|
     title = kickstarter.css("li.project.grid_4 h2.bbcard_name").text
     projects[title.to_sym] = {
-      project.description = kickstarter.css("li.project.grid_4 p.bbcard_blurb").text.strip
-      project.img = kickstarter.css("li.project.grid_4 img.projectphoto-little").attribute("src").value
-      project.location = kickstarter.css("li.project.grid_4 span.location-name").text.strip
+      project.description = kickstarter.css("li.project.grid_4 p.bbcard_blurb").text.strip,
+      project.img = kickstarter.css("li.project.grid_4 img.projectphoto-little").attribute("src").value,
+      project.location = kickstarter.css("li.project.grid_4 span.location-name").text.strip,
       project.percent_funded = kickstarter.css("li.project.grid_4 li.first strong").text.strip
     }
   end
