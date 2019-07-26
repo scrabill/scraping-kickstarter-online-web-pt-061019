@@ -16,7 +16,7 @@ def create_project_hash
     projects[title.to_sym] = {
       project.description = kickstarter.css("li.project.grid_4 p.bbcard_blurb").text.strip
       project.img = kickstarter.css("li.project.grid_4 img.projectphoto-little").attribute("src").value
-      kickstarter.css("li.project.grid_4 span.location-name").first.text.strip
+      project.location = kickstarter.css("li.project.grid_4 span.location-name").text.strip
       kickstarter.css("li.project.grid_4 li.first strong").first.text.strip
 
     }
